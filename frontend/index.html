@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenor | AI Powered Marketplace</title>
+    <meta name="description" content="Avenor is an AI powered marketplace for smarter product search, comparison, and recommendations.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="page-glow"></div>
+
+    <nav class="navbar">
+        <a href="#" class="logo">AVENOR</a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="search-box">
+            <select aria-label="Search category">
+                <option>All</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+                <option>Beauty</option>
+                <option>Gaming</option>
+                <option>Luxury</option>
+            </select>
+            <input type="text" placeholder="Search products, brands, categories">
+            <button type="button">Search</button>
+        </div>
+
+        <div class="nav-actions">
+            <button class="nav-pill">Login</button>
+            <button class="nav-pill">Wishlist</button>
+            <button class="nav-pill">Orders</button>
+            <button class="cart-btn">Cart <span>3</span></button>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#fashion">Fashion</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#beauty">Beauty</a>
+            <a href="#gaming">Gaming</a>
+            <a href="#luxury">Luxury</a>
+            <a href="#ai">AI Assistant</a>
+        </div>
+    </nav>
+
+    <div class="market-strip">
+        <a href="#flash">Flash Deals</a>
+        <a href="#trending">Trending Products</a>
+        <a href="#recommended">Recommended For You</a>
+        <a href="#electronics">Top Electronics</a>
+        <a href="#luxury">Luxury Collection</a>
+        <a href="#recent">Recently Viewed</a>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content spatial-layer" data-depth="18">
+                <p class="eyebrow">AI Powered Marketplace</p>
+                <h1>Shop Smarter With AI</h1>
+                <p class="hero-text">
+                    Search products, compare items, get recommendations instantly, and discover the best deals across fashion, electronics, beauty, gaming, luxury, and more.
+                </p>
+
+                <div class="ai-search-panel">
+                    <label for="aiSearch">What are you looking for today?</label>
+                    <div class="ai-search-box">
+                        <input id="aiSearch" type="text" placeholder="Gaming Laptop under ₹70,000">
+                        <button type="button">Ask AI</button>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#recommended" class="btn primary">Start Shopping</a>
+                    <a href="#ai" class="btn secondary">Try AI Assistant</a>
+                </div>
+
+                <div class="trust-row">
+                    <div>
+                        <strong>100K+</strong>
+                        <span>Products</span>
+                    </div>
+                    <div>
+                        <strong>AI</strong>
+                        <span>Smart Search</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Shopping Help</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-stage spatial-layer" data-depth="-14">
+                <canvas id="marketCanvas"></canvas>
+                <div class="floating-tag tag-one">AI Compare</div>
+                <div class="floating-tag tag-two">Best Deals</div>
+                <div class="floating-tag tag-three">Smart Picks</div>
+            </div>
+        </section>
+
+        <section class="categories" id="fashion">
+            <div class="section-head">
+                <p class="eyebrow">Shop By Category</p>
+                <h2>Everything you need in one marketplace</h2>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <span>01</span>
+                    <div class="category-icon">👗</div>
+                    <h3>Fashion</h3>
+                    <p>Clothing, footwear, watches, bags, and accessories.</p>
+                </article>
+
+                <article class="category-card" id="electronics">
+                    <span>02</span>
+                    <div class="category-icon">📱</div>
+                    <h3>Mobiles</h3>
+                    <p>Latest smartphones, accessories, and smart devices.</p>
+                </article>
+
+                <article class="category-card">
+                    <span>03</span>
+                    <div class="category-icon">💻</div>
+                    <h3>Laptops</h3>
+                    <p>Work, study, creator, gaming, and premium laptops.</p>
+                </article>
+
+                <article class="category-card" id="beauty">
+                    <span>04</span>
+                    <div class="category-icon">💄</div>
+                    <h3>Beauty</h3>
+                    <p>Perfumes, skincare, grooming, and beauty essentials.</p>
+                </article>
+
+                <article class="category-card" id="gaming">
+                    <span>05</span>
+                    <div class="category-icon">🎧</div>
+                    <h3>Gaming</h3>
+                    <p>Headsets, keyboards, consoles, chairs, and accessories.</p>
+                </article>
+
+                <article class="category-card" id="luxury">
+                    <span>06</span>
+                    <div class="category-icon">⌚</div>
+                    <h3>Luxury</h3>
+                    <p>Premium watches, fashion, perfumes, and lifestyle items.</p>
+                </article>
+
+                <article class="category-card">
+                    <span>07</span>
+                    <div class="category-icon">🏠</div>
+                    <h3>Home</h3>
+                    <p>Decor, smart home, kitchen, comfort, and utility items.</p>
+                </article>
+
+                <article class="category-card">
+                    <span>08</span>
+                    <div class="category-icon">🎒</div>
+                    <h3>Accessories</h3>
+                    <p>Daily essentials, tech add-ons, bags, and lifestyle gear.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bento-section" id="ai">
+            <div class="section-head">
+                <p class="eyebrow">Avenor Intelligence</p>
+                <h2>AI built into the shopping experience</h2>
+            </div>
+
+            <div class="bento-grid">
+                <article class="bento-card large tilt-card">
+                    <span class="card-kicker">AI Product Search</span>
+                    <h3>Find products using natural language</h3>
+                    <p>Search like a real conversation: “best phone under ₹30,000”, “formal shoes for office”, or “gaming laptop under ₹70,000”.</p>
+                    <button class="mini-btn">Search With AI</button>
+                </article>
+
+                <article class="bento-card tall tilt-card">
+                    <span class="card-kicker">AI Comparison</span>
+                    <h3>Compare before buying</h3>
+                    <p>Avenor helps compare price, rating, features, reviews, and value for money.</p>
+                </article>
+
+                <article class="bento-card tilt-card">
+                    <span class="card-kicker">AI Stylist</span>
+                    <h3>Fashion guidance</h3>
+                    <p>Get outfit suggestions for occasions, colors, budget, and personal style.</p>
+                </article>
+
+                <article class="bento-card tilt-card">
+                    <span class="card-kicker">AI Assistant</span>
+                    <h3>Shopping help</h3>
+                    <p>Ask what to buy, what to avoid, and what gives the best value.</p>
+                </article>
+
+                <article class="bento-card wide tilt-card">
+                    <span class="card-kicker">Marketplace Engine</span>
+                    <h3>Fast browsing, better choices, smarter recommendations</h3>
+                    <p>Avenor combines marketplace shopping with AI discovery, product suggestions, comparison, wishlist, cart, orders, and admin management.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section" id="flash">
+            <div class="section-head">
+                <p class="eyebrow">Flash Deals</p>
+                <h2>Limited time offers</h2>
+            </div>
+            <div class="product-grid" id="flashDeals"></div>
+        </section>
+
+        <section class="product-section" id="trending">
+            <div class="section-head">
+                <p class="eyebrow">Trending Products</p>
+                <h2>Popular right now</h2>
+            </div>
+            <div class="product-grid" id="trendingProducts"></div>
+        </section>
+
+        <section class="product-section" id="recommended">
+            <div class="section-head">
+                <p class="eyebrow">Recommended For You</p>
+                <h2>Smart picks by Avenor AI</h2>
+            </div>
+            <div class="product-grid" id="recommendedProducts"></div>
+        </section>
+
+        <section class="product-section">
+            <div class="section-head">
+                <p class="eyebrow">Top Rated Electronics</p>
+                <h2>Performance products worth buying</h2>
+            </div>
+            <div class="product-grid" id="electronicsProducts"></div>
+        </section>
+
+        <section class="product-section">
+            <div class="section-head">
+                <p class="eyebrow">Luxury Collection</p>
+                <h2>Premium picks with a sharp finish</h2>
+            </div>
+            <div class="product-grid" id="luxuryProducts"></div>
+        </section>
+
+        <section class="product-section" id="recent">
+            <div class="section-head">
+                <p class="eyebrow">Recently Viewed</p>
+                <h2>Continue your shopping journey</h2>
+            </div>
+            <div class="product-grid" id="recentProducts"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#" class="logo">AVENOR</a>
+            <p>AI powered marketplace for smarter shopping, better comparison, and personalized product discovery.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Login</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Orders</a>
+            <a href="#">Support</a>
+            <a href="#">Admin</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
